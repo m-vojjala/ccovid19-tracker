@@ -11,7 +11,7 @@ const [data1,setData] = useState([]);
   .then(({
       data
   }) => {
-    console.log(data.data[0])
+    console.log(data.data)
       
   })
 })
