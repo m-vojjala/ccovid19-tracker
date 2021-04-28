@@ -1,19 +1,19 @@
-import axios from "axios";
-import {useEffect, useState} from "react";
+// import axios from "axios";
+// import {useEffect, useState} from "react";
 
-export default function Data(){
-const [data1,setData] = useState([]);
-  useEffect(()=>{
-    axios({
-      method: 'GET',
-      url: 'https://corona-api.com/countries',
-  })
-  .then(({
-      data
-  }) => {
-    console.log(data.data)
+// export default function Data(){
+// const [data1,setData] = useState([]);
+//   useEffect(()=>{
+//     axios({
+//       method: 'GET',
+//       url: 'https://corona-api.com/countries',
+//   })
+//   .then(({
+//       data
+//   }) => {
+//     console.log(data.data)
       
-  })
-})
-return (<div><h1>covid19-tracker</h1></div>)
-}
+//   })
+// })
+// return (<div><h1>covid19-tracker</h1></div>)
+// }
