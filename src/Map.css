@@ -1,0 +1,10 @@
+.flag-info{
+  height: 80px;
+  width:100%;
+  background-size: cover;
+  border-radius: 8px;
+}
+.flag-info img{
+  width:100px;
+  border-radius: 5px;
+}

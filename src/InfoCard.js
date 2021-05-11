@@ -11,16 +11,23 @@ const useStyles = makeStyles({
     height:'150px'
   },
   title: {
-    fontSize: 14,
+    fontSize: 17,
+    color:'red'
   },
+  // isRed:{
+  //   color:'red'
+  // }
 });
 
-export default function InfoCard(){
+export default function InfoCard(props){
+  console.log(props)
   const classes = useStyles();
   return (<Card className={classes.root}>
     <CardContent>
       <Typography className={classes.title} color="textSecondary" gutterBottom>
-        Word of the Day
+        {props.title}
+      </Typography> <Typography className={classes.title} color="textSecondary" gutterBottom>
+        {props.total}
       </Typography>
     </CardContent>
   </Card>)
