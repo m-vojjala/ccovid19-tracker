@@ -8,11 +8,15 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   root: {
     width:'300px',
-    height:'150px'
+    height:'150px',
+    border:'solid #F0F8FF	',
+    borderRadius:'4%',
+    marginLeft:'2%',
+    marginTop:'2%',
+    marginBottom:'2%'
   },
   title: {
-    fontSize: 17,
-    color:'red'
+    fontSize: 20,
   },
   // isRed:{
   //   color:'red'
@@ -22,11 +26,11 @@ const useStyles = makeStyles({
 export default function InfoCard(props){
   console.log(props)
   const classes = useStyles();
-  return (<Card className={classes.root}>
+  return (<Card style={{backgroundColor:props.color,color:'white'}} className={classes.root}>
     <CardContent>
-      <Typography className={classes.title} color="textSecondary" gutterBottom>
+      <Typography className={classes.title}  gutterBottom>
         {props.title}
-      </Typography> <Typography className={classes.title} color="textSecondary" gutterBottom>
+      </Typography> <Typography className={classes.title}  gutterBottom>
         {props.total}
       </Typography>
     </CardContent>

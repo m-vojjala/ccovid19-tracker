@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import InfoCard from "./InfoCard";
 import './Infobox.css'
 
-var numeral = require('numeral');
+const numeral = require('numeral');
 
 export default function InfoBox() {
   const [total, setTotal] = useState('');
@@ -23,9 +23,9 @@ export default function InfoBox() {
       .catch(err => console.log(err))
   }, []);
 
-  return (<div style={{ display: 'flex', flexDirection: 'row',marginTop:'50px' }}>
-    <InfoCard title='Total Cases' total={numeral(total).format("0,0")}  />
-    <InfoCard  title='Recovered' total={numeral(recovered).format("0,0")} />
-    <InfoCard title='Deaths' total={numeral(deaths).format("0,0")}/>
+  return (<div className='info-box'>
+    <InfoCard color='	#00688B' title='Total Cases' total={numeral(total).format("0,0")}  />
+    <InfoCard  title='Recovered' color='#70DC70' total={numeral(recovered).format("0,0")} />
+    <InfoCard title='Deaths' color='#FF030D' total={numeral(deaths).format("0,0")}/>
   </div>)
 }
